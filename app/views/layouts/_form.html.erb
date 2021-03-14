@@ -1,0 +1,29 @@
+   <h2>User Info</h2>
+   <table class="table">
+      <tr>
+      </tr>
+
+      <tr>
+      <th>name</th>
+      <th><%= user.name %></th>
+      </tr>
+
+      <tr>
+      <th>email</th>
+      <th><%= user.email %></th>
+      </tr>
+   </table>
+ 
+   <%= form_with model: book,local: true do |f| %>
+      <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title,class: "form-control" %>
+      </div>
+      <div class="field">
+      <%= f.label :body %>
+      <%= f.text_field :body,class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.submit "保存" ,class: "btn-block btn-success my-3" %>
+      </div>
+      <% end %>
